@@ -1,0 +1,836 @@
+/* ELEMENTS GENERAUX DU SITE (police, font-weight...) */
+a {
+    color:#38003c;
+    font-weight: bold;
+}
+
+body {        
+    font-family:Radical,Arial,Sans-Serif;
+    font-weight:bold;
+    left: 0;
+    right:0;
+    min-width: 600px;
+    min-height: 100%;
+    position: relative;
+    margin: 0;
+    
+    background-image: url(/SuiviPremierLeague/images/General/Background.jpeg);
+    background-attachment: fixed;
+    
+    overflow-x: hidden;
+
+}
+
+
+body::after {
+    content: '';
+    display: block;
+    height: 100px;
+}
+
+html {
+    height: 100%;   
+}
+
+
+
+/* ELEMENTS DU HEADER */
+
+header {
+    display:flex;
+    justify-content: space-between;
+    background:#38003c; 
+    right: 0;
+    left: 0;
+    min-width: 600px;
+    top: 0;
+    position: fixed;
+    margin: 0;
+    z-index: 1;
+    
+}
+
+#logo {
+    
+    
+    margin: 15px 25px;
+    
+}
+
+#logo img{
+    max-width:110px;
+    
+}
+
+#navMenu {
+    display: flex;
+    flex:0.5 1 auto;
+
+}
+
+
+.navMenuBtn {
+    text-decoration: none;
+    color:white;
+    margin: auto; 
+
+    text-align: center;
+
+
+}
+
+#userMenu {
+    display: flex;    
+    flex-direction: column;
+    justify-content: space-around;   
+    margin-right: 15px;
+    width:140px;
+
+
+}
+
+.userMenuBtn {
+    
+    text-align:center;
+    text-decoration: none;
+    color:white;
+
+}
+
+#logOutBtn {
+
+    color: #FF2A2A;
+}
+
+/* ELEMENTS DU FOOTER */
+
+footer {
+
+    display: flex;
+    justify-content: space-between;
+    background:#38003c;
+    height: 50px;
+
+    position: absolute;
+    
+    bottom: 0;
+    right: 0;
+    left: 0;
+    min-width: 600px;
+    white-space: nowrap;
+    
+}
+
+#footerNav {
+    margin: auto 25px;  
+
+}
+
+#footerMsg {
+
+    font-size: 80%;
+    margin: auto 50px;
+    color: white;
+}
+
+.footerNavBtn {
+    margin: auto 40px ;
+
+}
+
+.footerNavBtn img {
+    vertical-align: middle;
+    max-width: 25px;
+    max-height: 30px;
+
+}
+
+/* GESTION DU SURVOL/CLIC SUR LES BOUTONS */
+
+#logo:hover, 
+.navMenuBtn:hover, 
+.userMenuBtn:hover, 
+#matchweekSelect:hover, 
+.clubLinksBtn:hover, 
+.footerNavBtn:hover,
+.underlineLink:hover,
+.formBtn:hover {
+    cursor: pointer;
+    opacity: 0.7;
+
+}
+
+#logo:hover, 
+.navMenuBtn:hover, 
+.userMenuBtn:hover,
+.footerNavBtn:hover,
+.clubLinksBtn:hover {
+    transform: scale(1.1);
+    
+
+}
+
+
+#logo:active, 
+button:active,
+.navMenuBtn:active, 
+.userMenuBtn:active, 
+.clubLinksBtn:active,
+.footerNavBtn:active,
+.formBtn:active,
+.clubLinksBtn:active,
+eachClubEmblem:active {
+    opacity: 0.4;
+    transform: scale(0.9);
+    
+
+}
+
+#logo, 
+.navMenuBtn, 
+.userMenuBtn, 
+#matchweekSelect,
+.clubLinksBtn,
+.footerNavBtn,
+.formBtn,
+.clubLinksBtn,
+button {
+    
+    transition: 0.15s;
+
+}
+
+/* ELEMENTS DE LA HOME PAGE */
+
+#homeBanner {
+
+    display: flex;
+    flex-direction: column;   
+    flex-wrap: nowrap;
+    text-align: center;
+    font-size: 200%;
+    background:white;
+    border-bottom: solid 2px #38003c;
+    padding: 5px;
+    margin: 80px -10px auto;    
+    
+
+}
+
+
+
+.eachClubEmblem {    
+    max-height: 50px;
+    transition: 0.3s;
+}
+
+.eachClubEmblem:active {    
+    
+    transform: scale(0.5);
+}
+
+.eachClubEmblem:hover {    
+    cursor: pointer;
+    
+    transform: scale(1.2);
+
+}
+
+#clubEmblemLine {
+    white-space: nowrap;
+    overflow: scroll;
+
+}
+
+#clubEmblemLine button {
+    background:none;
+    border: none;
+    margin:5px;
+   
+}
+
+#homeMessage {
+    
+    text-align: center;
+    font-size: 200%;
+    color: white;
+    background: #e90052;
+    padding: 15px;
+    margin:auto;
+    margin-bottom: 20px;
+}
+
+#loginMessage {
+    font-size: 70%;
+    margin: 10px auto;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.underlineLink {
+    font-weight: bold;
+    font-style: normal;
+}
+
+#homeMain {   
+    display: flex;   
+    flex-direction: column;
+    margin: auto auto 150px;
+    width: 100%;
+    min-width: 600px;
+}
+
+.homeMainTitle {
+    
+    color: white;
+    
+    padding-left: 25px;
+    font-size: 180%;
+    margin: 40px 120px auto;
+
+    border-left: solid 5px #e90052;
+}
+
+#homePLArticle {
+
+    display: flex;
+    margin: auto; 
+    
+    max-width: 90%;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    min-width: 600px;
+}
+
+.homeEachArticle {
+    box-shadow: 10px 10px #e90052;
+    width: 350px;
+    margin: 25px;
+    height: 220px;
+    
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.homeEachArticle:hover .homeArticleTitle {
+    text-decoration: underline;
+    
+}
+
+.homeEachArticle:hover {
+    
+    transform: scale(1.05);
+    
+    box-shadow: -10px 10px #e90052;
+    
+}
+
+.homeEachArticle:active {
+    
+    transform: scale(1);
+    
+    
+}
+
+.homeEachArticle:hover .homeArticleImg {
+    
+    transform: scale(1.15);
+    
+    
+}
+
+.homeArticleTitle {
+    
+    color: white;    
+    padding: 5px;
+    
+    background: black;
+    
+}
+
+.homeArticleImg {
+    width: 350px;
+    height: 220px;
+    transition: 1s;
+}
+
+.homeArticleMediaLink{
+    text-align: right;
+    margin:5px 5px auto;
+    font-weight: normal;
+    font-style: italic;
+    color: white;
+
+}
+
+
+.homeArticleTitleContainer {
+    
+    background: black;
+    opacity: 75%;
+    max-height: 106px;
+    position: absolute;
+    bottom:0;
+    
+}
+
+#homePLHistory, #homePLHonours {
+    display: flex;
+
+    
+    background: white;
+    width: 90%;
+    min-width: 600px;
+    height: 210px;
+    margin: 30px auto;    
+    justify-content: space-between;
+    box-shadow: 10px 10px #e90052;
+    transition: 0.3s;
+
+}
+
+
+.imageZoom {
+    overflow: hidden;
+    width:350px;
+    height:100%;
+}
+
+.homeMainImg {
+    width: 350px;
+    height: 100%;
+    transition: 0.5s;
+    
+}
+
+#homePLHistory:hover img,
+#homePLHonours:hover img  {
+    transform: scale(1.15) ;
+    
+}
+
+.homeMainInfo {
+
+
+    margin: 15px ;
+    overflow: scroll;
+
+}
+
+#homePLTOTW {
+    display: flex;
+    
+    background: white;
+    width: 90%;
+    min-width: 800px;
+    height:600px;
+    margin: 30px auto;    
+    overflow: scroll;
+    box-shadow: 10px 10px #e90052;
+}
+
+#homePLTOTWImg:hover {
+    transform: scale(1.05) translate(-5px) ;
+    
+}
+#TOTWimageZoom {
+    overflow: hidden;
+    
+    height:600px;
+}
+
+#homePLTOTWImg {
+    
+    height: 600px;
+    
+    transition: all 0.5s;
+}
+
+
+#sponsorBannerImg {
+    
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 50px;
+    width: 100%;
+    border-top: solid 2px #38003c;
+
+}
+
+/* ELEMENTS DES FORMULAIRES REGISTER/LOGIN/FORGOTTENPASS/CHANGEPASSWORD */
+
+
+
+#registerFormContainer, 
+#loginFormContainer,
+#forgotPasswordFormContainer,
+#changePasswordFormContainer {
+    position: relative;
+    top: 150px;
+    width: 500px;
+    display: flex;
+    justify-content: space-around;           
+    background: white;
+    box-shadow: 10px 10px #e90052;
+    margin: auto;  
+    padding: 20px;
+
+}
+
+
+
+
+#registerFormContainer input, 
+#registerFormContainer select, 
+#loginFormContainer input,
+#forgotPasswordFormContainer input,
+#changePasswordFormContainer input {
+    border: solid 1px #38003c;
+    border-radius: 2px;
+}
+
+
+
+
+.formBtn {
+    font-weight: bold;
+    width: 100%;
+    background:#38003c;
+    color: white;
+    border-radius: 5px;
+    border: solid 1px #38003c;
+}
+
+#userTeam{
+    width: 100%;
+}
+
+.errorMsg {
+    color: #e90052;
+    text-align: center;
+    width: 250px;
+}
+
+#registerFormError, #loginFormError {
+    margin: auto;
+}
+
+/* ELEMENTS PAGE ACCOUNT */
+
+#accountMain {
+    padding-top: 150px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#userInfo {
+
+    box-shadow: 10px 10px #e90052;
+    font-size: 125%;
+    background: white;
+    width: 80%;
+    text-align: left;
+    padding: 20px;
+}
+
+#accountClubEmblem {
+    vertical-align: middle;
+    max-width: 30px;
+    max-height: 50px;
+}
+
+
+
+/* ELEMENTS DES TABLES (league, scorers, playmakers, cleansheets et fixtures) ET LEUR COLONNES [PAGES "TABLES" et "FIXTURES"] 
++ gestion des emblemes d'equipes */
+
+#tableContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    margin-top: 80px;
+    min-width: 600px;
+    
+}
+
+.tablesPageTitle {
+    text-align: left;
+    color:white;
+    border-left: solid 5px #e90052;
+    padding-left: 25px;
+    font-size: 180%;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+#leagueTable, #fixtureTable, #playerTable {            
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#leagueTable td {            
+    height: 30px;
+
+}
+
+#goalTable td, #assistTable td, #cleansheetTable td {
+    height: 25px;
+}
+
+#leagueTable table {    
+    background: white;
+    flex-wrap: nowrap;
+    margin-bottom: 40px;
+    min-width: 600px;
+    box-shadow: 10px 10px #e90052;
+
+}
+
+#playerTable table {   
+    background: white;
+    min-width: 600px;
+    box-shadow: 10px 10px #e90052;
+}
+
+#fixtureTable {
+    margin-top: 50px;
+    background: white;
+    width: 850px;
+    white-space: nowrap;
+    box-shadow: 10px 10px #e90052;
+    
+}
+
+#fixtureTable td {
+    height: 25px;
+    
+}
+
+.teamRow, .playerNameRow {
+    text-align: left;      
+    min-width:150px;
+}
+
+.teamRowLeft {
+    text-align: right;
+    width: 150px;
+}
+
+.teamRowLeftClub {
+    text-align: right;
+    min-width: 150px;
+}
+
+.teamRowRight {
+    text-align: left;
+    width: 150px;
+}
+
+.teamRowRightClub {
+    text-align: left;
+    min-width: 150px;
+}
+
+.scoreRow {
+    min-width:50px;
+
+}
+
+.stadiumRow {
+    min-width: 200px;
+    font-weight: normal;
+}
+
+.stadiumRowClub {
+    min-width: 150px;
+    font-weight: normal;
+}
+
+
+.clubEmblem {
+    max-width: 20px;
+    max-height: 50px;
+
+    vertical-align: middle;
+} 
+
+.statRow {
+    font-weight: normal;
+}
+
+/* ELEMENTS DU FORMULAIRE DU CHOIX DE LA MATCHWEEK [PAGE "FIXTURES"]*/
+
+#matchweekSelect {
+    color:#38003c;
+    background:white; 
+    font-family:Radical,Arial,Sans-Serif;
+    font-weight:bold;
+    font-size: 120%;
+    height:30px;
+    border: solid 1px #38003c;   
+    width:400px;
+    text-align: center; 
+
+}
+
+#matchweekForm {
+    display: flex;
+    justify-content: center;
+    margin-top: 90px;
+}
+
+
+/* ELEMENTS PAGE MY CLUB */
+
+#noTeamSelected {
+
+   
+    margin:auto;
+    font-size: 150%;
+    
+}
+
+#clubHead {
+
+    display: flex;
+    justify-content: space-between;
+    background:white;
+    
+    margin: 80px -10px auto -10px;
+    min-width: 750px;
+
+    max-height:200px;
+    border-bottom: solid 2px #38003c;
+}
+
+#clubInfoClubPage {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color:#38003c;
+
+}
+
+#clubNameClubPage {
+    font-size: 250%;
+    color: #38003c;
+    
+}
+
+
+#clubEmblemClubPage {
+    
+    width: 200px;
+    
+    text-align: center;
+    margin-right: 25px;
+    margin-top: auto;
+    margin-bottom: auto;
+    
+}
+
+#clubEmblemClubPage:hover img {
+    
+    transform:rotateY(360deg);
+    
+}
+
+#clubEmblemClubPage img {
+    width: 120px;
+    vertical-align: central;
+    transition: 1s;
+    max-height: 150px;
+}
+
+#clubLinks {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    min-width: min-content;
+    margin-left: 25px;
+    max-height: 170px;
+    
+}
+
+.clubLinksBtn{
+    text-decoration: none;
+    
+    text-align: left;
+    margin: auto;
+    font-size: 120%;
+    color: #38003c;
+    padding: 5px;
+    margin-left: 15px;
+    min-width: 175px;
+}
+
+#clubPageBody {    
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;   
+    height: min-content;
+}
+
+.clubPageTitle {
+    font-size: 180%;    
+    color: white;
+    margin: 50px 25px 25px;
+    
+    border-left: solid 5px #e90052;
+    padding-left:25px;
+}
+
+#clubPageFixture {
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#clubPageFixtureTable {
+    text-align: center;
+
+    background: white;
+
+    
+    white-space: nowrap;
+    box-shadow: 10px 10px #e90052;
+}
+
+#clubPageTitlesAndMap {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.trophyList{
+    margin-left: 25px;
+    font-size: 110%;
+
+}
+
+#clubTitles {
+    background: white;
+
+    
+    width: 500px;
+    padding: 5px;
+    box-shadow: 10px 10px #e90052;
+}
+
+#stadiumLocationMap {
+    width: 510px;
+    height: 500px;
+    box-shadow: 10px 10px #e90052;
+    
+    overflow:hidden;
+    background:none!important;
+    
+}
+
+
